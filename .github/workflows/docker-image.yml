@@ -18,3 +18,5 @@ jobs:
       run: docker build . --file Dockerfile --tag lammermann/avr-gcc:$(date +%Y-%m-%d) --tag lammermann/avr-gcc:latest
     - name: Push the latest Docker image
       run: docker push lammermann/avr-gcc
+    - name: Push the latest Docker image with date tag
+      run: docker push lammermann/avr-gcc:$(date +%Y-%m-%d)
